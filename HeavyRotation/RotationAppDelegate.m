@@ -7,6 +7,7 @@
 //
 
 #import "RotationAppDelegate.h"
+#import "HeavyViewController.h"
 
 @implementation RotationAppDelegate
 
@@ -14,6 +15,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    HeavyViewController *heavyViewController = [[HeavyViewController alloc] init];
+    [self.window setRootViewController:heavyViewController];
     
     UIDevice *device = [UIDevice currentDevice];
     [device beginGeneratingDeviceOrientationNotifications];
